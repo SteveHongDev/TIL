@@ -28,10 +28,11 @@ import UIKit
  */
 
 
+func add(a: Int, b: Int) -> Int { // 파라미터는 임시 상수이다.
+    return a + b
+}
 
-
-
-
+add(a: 3, b: 4)
 
 
 
@@ -47,7 +48,7 @@ import UIKit
  ![call](call.png)
  */
 
-
+add(a: 12, b: 34)
 
 
 
@@ -66,8 +67,13 @@ import UIKit
  ![defval](defval.png)
  */
 
+func sayHello(to: String = "Stranger") {
+    print("Hello, \(to)")
+}
 
+sayHello(to: "Swift")
 
+sayHello()
 
 
 

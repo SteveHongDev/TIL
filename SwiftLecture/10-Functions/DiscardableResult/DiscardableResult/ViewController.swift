@@ -28,6 +28,7 @@ func doSomething() {
    print("Something secret")
 }
 
+//@discardableResult
 func saySomething() -> String {
    return "Hello"
 }
@@ -39,7 +40,8 @@ class ViewController: UIViewController {
       
       doSomething()
 
-      saySomething()
+
+      _ = saySomething()
    }
 }
 

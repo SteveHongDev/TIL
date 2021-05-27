@@ -25,18 +25,8 @@ import UIKit
  # In-Out Parameters
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
+var num1 = 12
+var num2 = 34
 
 
 
@@ -45,5 +35,44 @@ import UIKit
  ![inout-def](inout-def.png)
  ![inout-call](inout-call.png)
  */
+
+func swapNumber(_ a: inout Int, with b: inout Int) {
+    var tmp = a
+    a = b
+    b = tmp
+}
+
+num1
+num2
+
+swapNumber(&num1, with: &num2)
+
+num1
+num2
+
+// var여야 한다, inout 파라미터 2개가 같을 수는 없다 ex) swapNumber(&num1, with: &num1)
+
+func sum(of nums: inout Int...)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

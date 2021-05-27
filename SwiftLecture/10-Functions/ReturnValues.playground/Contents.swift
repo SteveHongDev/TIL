@@ -21,20 +21,45 @@
 //
 import UIKit
 
+
+
+
+
+
+
+
 /*:
  # Return Values
  ![return](return.png)
  */
 
 
+func sayHello() {
+    print("Hello, Swift")
+}
+
+sayHello()
+
+func add() -> Int {
+    return 1 + 2
+}
+
+let r = add()
+
+if add() == 3 {
+    print("three")
+}
 
 
-
-
-
-
-
-
+func doSomething() {
+    let rnd = Int.random(in: 1...100)
+    
+    if rnd % 2 == 1 {
+        return
+    }
+    print(rnd)
+    
+}
 
 
 

@@ -71,8 +71,8 @@ if var num = num {
 let a: Int? = 12
 let b: String? = "str"
 
-if let num = a, let str = b, str.count > 5 {
-    
+if let num = a, let str = b {
+    print(num)
 }
 
 
