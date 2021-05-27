@@ -22,21 +22,10 @@
 import UIKit
 
 /*:
- # Capturing Values
+ # Value Binding Pattern
+ ## Syntax
+ ![value-binding](value-binding.png)
  */
-
-var num = 0
-let c = {
-    num += 1
-    print("check point #1: \(num)")
-}
-
-c()
-
-print("check point #2: \(num)")
-
-
-
 
 
 

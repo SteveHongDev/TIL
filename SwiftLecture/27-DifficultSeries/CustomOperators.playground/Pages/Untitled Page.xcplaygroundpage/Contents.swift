@@ -22,35 +22,41 @@
 import UIKit
 
 /*:
- # Capturing Values
+ # Custom Operators
+ ![operator](operator.png)
+ 
+ ### Reserved Tokens
+ (, ), {, }, [, ], ., ,, :, ;, =, @, #, &(prefix operator), ->, `, ?, !(postfix operator), \/*, *\/
+ 
+ ### First Character
+ /, =, -, +, !, *, %, <, >, &, |, ^, ?, ~
+ 
+ ![custom-operator](custom-operator.png)
+ */*/
+
+
+
+
+
+
+
+
+
+
+
+/*:
+ # Precedence Groups
+ ![precedence-group](precedence-group.png)
+ 
+ [Operator Declarations]:
+ https://developer.apple.com/documentation/swift/operator_declarations "Operator Declarations"
+ 
+ [Operator Declarations]
+ 
+ ![precedence-group-syntax](precedence-group-syntax.png)
+ 
+ ![precedence-group-declaration](precedence-group-declaration.png)
  */
-
-var num = 0
-let c = {
-    num += 1
-    print("check point #1: \(num)")
-}
-
-c()
-
-print("check point #2: \(num)")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

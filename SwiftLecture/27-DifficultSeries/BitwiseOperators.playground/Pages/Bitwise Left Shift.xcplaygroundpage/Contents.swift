@@ -19,41 +19,19 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-import UIKit
+//: [Previous](@previous)
+
+import Foundation
 
 /*:
- # Capturing Values
+ # Bitwise Left Shift Operator
+ ````
+ a << n
+ ````
+ ![lshift](lshift.png)
  */
 
-var num = 0
-let c = {
-    num += 1
-    print("check point #1: \(num)")
-}
-
-c()
-
-print("check point #2: \(num)")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//: [Next](@next)

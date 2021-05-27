@@ -34,6 +34,58 @@ let products = [
    "Apple Watch Series 4", "Apple Watch Nike+"
 ]
 
+var proModels = products.filter({ (name: String) -> Bool in
+    return name.contains("Pro")
+})
+
+products.filter {
+    $0.contains("Pro")
+}
+
+proModels.sort(by: { (lhs: String, rhs: String) -> Bool in
+    return lhs.caseInsensitiveCompare(rhs) == .orderedAscending
+})
+
+enum Week {
+    case Mon(String)
+    case Tue(String)
+    case Wed(String)
+}
+
+let days: [Week] = [.Mon("Hi"), .Mon("Hello"), .Tue("Fuck")]
+
+let hasTue = days.contains(where: { (day: Week) -> Bool in
+    if case .Wed = day {
+        return true
+    }
+    return false
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

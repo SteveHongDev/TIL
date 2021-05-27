@@ -27,17 +27,66 @@ import UIKit
  # Multiple Trailing Closure
  */
 
-func multi(first: () -> (), second: () -> (), third: () -> ()) {
+func multi(first: () -> (), second: () -> (), third: () -> ()) {  // argument label 생략 시에는 multiple trailing closure 사용 불가능
    
 }
 
 // ~ Swift 5.2
 
-
+multi(first: { }, {
+    
+    
+    
+    
+    
+    
+    
+}) { // 가독성 떨어짐
+    
+}
 
 
 
 // Swift 5.3 ~
+
+multi {
+    <#code#>
+} second: {
+    <#code#>
+} third: {
+    <#code#>
+}
+
+UIView.animate(withDuration: 0.3, animations: {
+    
+    
+    
+    
+}) { (finished) in
+    
+    
+}
+
+
+UIView.animate(withDuration: 0.3) {
+    <#code#>
+} completion: { (finished) in
+    <#code#>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
