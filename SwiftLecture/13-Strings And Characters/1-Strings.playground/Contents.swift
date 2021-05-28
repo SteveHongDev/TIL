@@ -25,11 +25,17 @@ import UIKit
  # Strings and Characters
  */
 
+let s = "String"
+
+let c: Character = "C"
 
 
+let emptyChar: Character = " "
 
+let emptyString = ""
+emptyString.count
 
-
+let emptyString2 = String()
 
 
 
@@ -39,6 +45,12 @@ import UIKit
 /*:
  ## String Types
  */
+
+var nsstr: NSString = "str"
+
+let swiftStr: String = nsstr as String
+
+nsstr = swiftStr as NSString
 
 
 
@@ -55,6 +67,11 @@ import UIKit
  ## Mutability
  */
 
+let immutableStr = "str"
+//immutableStr = "new str"
+
+var mutableStr = "str"
+mutableStr = "new str"
 
 
 
@@ -76,6 +93,31 @@ import UIKit
 /*:
  ## Unicode
  */
+
+let str = "Swift String"
+
+str.utf8
+str.utf16
+
+var thumbUp = "👍"
+
+thumbUp = "\u{1F44D}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

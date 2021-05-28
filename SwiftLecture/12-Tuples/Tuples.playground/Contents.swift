@@ -28,6 +28,9 @@ import UIKit
  ![tuple-expr](tuple-expr.png)
  */
 
+let data = ("<html>", 200, "OK", 12.34)
+
+
 
 
 
@@ -44,8 +47,15 @@ import UIKit
  */
 
 
+data.0
+data.1
+data.2
+data.3
 
+var mutableTuple = data
+mutableTuple.1 = 404
 
+mutableTuple.1
 
 
 
