@@ -24,12 +24,30 @@ import UIKit
 /*:
  # Substring
  */
+let str = "Hello, Swift"
+let l = str.lowercased()
+
+var first = str.prefix(1)
+
+// Substring은 원본 문자열의 메모리를 공유한다.
+
+first.insert("!", at: first.endIndex) //Substring을 바꾸면 새로운 메모리로 복사 -> 바뀐 결과 저장
 
 
+str
+first
+
+let newStr = String(str.prefix(1))
 
 
+let s = str[..<str.index(str.startIndex, offsetBy: 2)]
 
 
+str[str.index(str.startIndex, offsetBy: 2)...]
+
+let lower = str.index(str.startIndex, offsetBy: 2)
+let upper = str.index(str.startIndex, offsetBy: 5)
+str[lower ... upper]
 
 
 

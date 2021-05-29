@@ -25,14 +25,28 @@ import UIKit
  # Appending Strings and Characters
  */
 
+//var str = "Hello"
+//str.append(", ")
+//str
+//
+//let s = str.appending("Swift")
+//
+//str
+//s.appending("??")
+//
+//"File size is".appendingFormat("%.1f", 12.34567)
 
 
 
 
+var str = "Hello Swift"
+str.insert(",", at: str.index(str.startIndex, offsetBy: 5))
+str
 
-
-
-
+if let index = str.firstIndex(of: "S") {
+    str.insert(contentsOf: "Mastering ", at: index)
+}
+str
 
 
 

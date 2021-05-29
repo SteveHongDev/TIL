@@ -25,14 +25,22 @@ import UIKit
  # Finding Substrings
  */
 
+let str = "Hello, Swift"
 
+str.lowercased().contains("swift")
 
+str.range(of: "Swift")
+str.range(of: "Swift", options: [.caseInsensitive])
 
+let str2 = "Hello, Programming"
+let str3 = str2.lowercased()
 
+var common = str.commonPrefix(with: str2)
 
+common = str.commonPrefix(with: str3)
+str.commonPrefix(with: str3, options: [.caseInsensitive]) // str에서 return한다
 
-
-
+str3.commonPrefix(with: str, options: [.caseInsensitive]) // str3에서 return한다
 
 
 
