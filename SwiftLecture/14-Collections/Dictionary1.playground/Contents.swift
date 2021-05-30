@@ -26,6 +26,10 @@ import Foundation
  ![dictliteral](dict-literal.png)
  */
 
+var dict = ["A": "Apple", "B": "Banana"]
+
+dict = [:]
+
 
 
 
@@ -47,6 +51,9 @@ import Foundation
  ![type2](dict-type2.png)
  */
 
+let dict1: Dictionary<String, Int>
+let dict2: [String: Int]
+
 
 
 
@@ -64,9 +71,11 @@ import Foundation
  ## Creating a Dictionary
  */
 
+let words = ["A": "Apple", "B": "Banana", "C": "City"]
 
-
-
+let emptyDict: [String: Int] = [:]
+let emptyDict2 = [String: String]()
+let emptyDict3 = Dictionary<String, String>()
 
 
 
@@ -82,7 +91,8 @@ import Foundation
  ## Inspecting a Dictionary
  */
 
-
+words.count
+words.isEmpty
 
 
 
@@ -104,13 +114,26 @@ import Foundation
  ## Accessing Keys and Values
  */
 
+words["A"]
+words["Apple"]
+
+let a = words["E"]
+
+let b = words["E", default: "Empty"]
 
 
 
+for k in words.keys {
+    print(k)
+}
+
+for v in words.values.sorted() {
+    print(v)
+}
 
 
-
-
+let keys = Array(words.keys)
+let values = Array(words.values)
 
 
 
