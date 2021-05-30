@@ -31,7 +31,9 @@ import Foundation
  ![array-literal](array-literal.png)
  */
 
+let nums = [1, 2, 3]
 
+nums
 
 
 
@@ -47,5 +49,15 @@ import Foundation
  ![array-type1](array-type1.png)
  ![array-type2](array-type2.png)
  */
+
+let strArray: Array<String>
+let strArray2: [String]
+
+
+
+
+
+
+
 
 

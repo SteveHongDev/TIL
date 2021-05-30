@@ -28,15 +28,13 @@ import UIKit
 let a = ["A", "B", "C"]
 let b = ["a", "b", "c"]
 
+a == b
+a != b
 
-
-
-
-
-
-
-
-
+a.elementsEqual(b)
+a.elementsEqual(b) { lhs, rhs in
+    return lhs.caseInsensitiveCompare(rhs) == .orderedSame
+}
 
 
 
@@ -46,15 +44,26 @@ let b = ["a", "b", "c"]
  # Finding Elements
  */
 
+let nums = [1, 2, 3, 1, 4, 5, 2, 6, 7, 5, 0]
 
+nums.contains(3)
+nums.contains(9)
 
+nums.contains { n in
+    return n % 2 == 0
+}
 
+nums.first { n in
+    return n % 2 == 0
+}
 
+nums.firstIndex { n in
+    return n % 2 == 0
+}
 
+nums.firstIndex(of: 1)
 
-
-
-
+nums.lastIndex(of: 1)
 
 
 
@@ -62,16 +71,24 @@ let b = ["a", "b", "c"]
  # Sorting on Array
  */
 
+nums.sorted()
 
+nums.sorted { lhs, rhs in
+    return lhs > rhs
+}
 
+nums.sorted().reversed()
+[Int](nums.sorted().reversed())
 
+var mutableNums = nums
 
+mutableNums.sort()
+mutableNums.reverse()
 
+mutableNums
+mutableNums.swapAt(0, 1)
 
-
-
-
-
+mutableNums.shuffle()
 
 
 

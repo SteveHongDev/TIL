@@ -25,6 +25,37 @@ import UIKit
  # Adding Elements
  */
 
+var alphabet = ["A", "B", "C"]
+
+alphabet.append("E")
+alphabet.append(contentsOf: ["F", "G"])
+
+alphabet.insert("D", at: 3) // 오버헤드 발생
+alphabet.insert(contentsOf: ["a", "b", "c"], at: 0)
+
+
+alphabet[0...2] = ["x", "y", "z"]
+alphabet
+
+alphabet.replaceSubrange(0...2, with: ["a", "b", "c"])
+alphabet
+
+alphabet[0...2] = ["z"]
+alphabet
+
+alphabet[0..<1] = []
+alphabet
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -36,7 +67,38 @@ import UIKit
  # Removing Elements
  */
 
+alphabet = ["A", "B", "C", "D", "E", "F", "G"]
 
+alphabet.remove(at: 2)
+alphabet
+
+//alphabet.remove(at: 222) wrong index number
+
+alphabet.removeFirst()
+alphabet
+
+alphabet.removeFirst(2)
+alphabet
+
+alphabet.removeLast()
+alphabet
+
+alphabet.removeAll()
+
+//alphabet.removeFirst() 옵셔널이 아니므로 에러 발생
+
+alphabet.popLast() // return Optional String
+
+alphabet = ["A", "B", "C", "D", "E", "F", "G"]
+alphabet.popLast()
+alphabet
+
+
+alphabet.removeSubrange(0...2)
+alphabet
+
+alphabet[0...2] = []
+alphabet
 
 
 
