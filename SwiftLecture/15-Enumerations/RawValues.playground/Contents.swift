@@ -26,12 +26,43 @@ import UIKit
  ![Raw Values](raw-values.png)
  */
 
+enum Alignment: Int {
+    case left
+    case right = 100
+    case center
+}
+
+Alignment.left.rawValue
+Alignment.right.rawValue
+Alignment.center.rawValue
+
+Alignment(rawValue: 0)
+
+Alignment(rawValue: 200)
 
 
 
 
+enum Weekday: String {
+    case sunday
+    case monday = "MON"
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+}
+
+Weekday.sunday.rawValue
+Weekday.monday.rawValue
 
 
+enum ControlChar: Character {
+    case tab = "\t"
+    case newLine = "\n"
+}
+
+ControlChar.newLine.rawValue
 
 
 

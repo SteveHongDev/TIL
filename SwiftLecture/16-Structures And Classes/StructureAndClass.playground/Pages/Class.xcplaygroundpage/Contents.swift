@@ -29,6 +29,21 @@ import Foundation
  */
 
 
+class Person {
+    var name = "John Doe"
+    var age = "0"
+    
+    func speak() {
+        print("Hello")
+    }
+}
+
+let p = Person()
+
+p.name
+p.age
+p.speak()
+
 
 
 

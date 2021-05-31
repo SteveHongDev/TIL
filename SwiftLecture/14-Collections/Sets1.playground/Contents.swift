@@ -27,6 +27,11 @@ import Foundation
  ![set-type](set-type.png)
  */
 
+let set: Set = [1, 2, 2, 3, 3, 3]
+set.count
+
+
+
 
 
 
@@ -38,8 +43,9 @@ import Foundation
  ## Inspecting a Set
  */
 
+set.count
 
-
+set.isEmpty
 
 
 
@@ -50,7 +56,7 @@ import Foundation
  ## Testing for Membership
  */
 
-
+set.contains(3)
 
 
 
@@ -63,6 +69,141 @@ import Foundation
 /*:
  ## Adding and Removing Elements
  */
+
+var words = Set<String>()
+
+var insertResult = words.insert("Swift")
+insertResult.inserted
+insertResult.memberAfterInsert
+
+insertResult = words.insert("Swift")
+insertResult.inserted
+insertResult.memberAfterInsert
+
+var updateResult = words.update(with: "Swift")
+updateResult
+
+updateResult = words.update(with: "Apple")
+updateResult
+
+
+var value = "Swift"
+value.hashValue
+
+updateResult = words.update(with: value)
+updateResult
+
+value = "Hello"
+value.hashValue
+
+updateResult = words.update(with: value)
+updateResult
+
+struct SampleData: Hashable {
+    var hashValue: Int = 123
+    var data: String
+    
+    init(_ data: String) {
+        self.data = data
+    }
+    
+    static func ==(lhs: SampleData, rhs: SampleData) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+}
+
+var sampleSet = Set<SampleData>()
+
+var data = SampleData("Swift")
+data.hashValue
+
+
+var r = sampleSet.insert(data)
+r.inserted
+r.memberAfterInsert
+sampleSet
+
+data.data = "Hello"
+data.hashValue
+
+r = sampleSet.insert(data)
+r.inserted
+r.memberAfterInsert
+sampleSet
+
+
+sampleSet.update(with: data)
+sampleSet
+
+
+words
+words.remove("Swift")
+words
+
+words.remove("Ghost")
+
+words.removeAll()
+words
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

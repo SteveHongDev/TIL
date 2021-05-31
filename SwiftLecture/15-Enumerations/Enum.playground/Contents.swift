@@ -26,9 +26,15 @@ import UIKit
  ![enum](enum.png)
  */
 
+let left = "left"
+let center = "center"
+let right = "right"
 
+var alignment = center
 
-
+if alignment == "Center" {
+    
+}
 
 
 
@@ -39,6 +45,55 @@ import UIKit
  ## Syntax
  ![syntax](enum-syntax.png)
  */
+
+enum Alignment {
+    case left
+    case center
+    case right
+}
+
+Alignment.center
+
+Alignment.right
+
+var textAlignment = Alignment.center
+
+// 열거형은 값이다.
+
+textAlignment = .left
+
+//textAlignment = .Left
+//textAlignment = .justify
+
+
+if textAlignment == .center {
+    
+}
+
+switch textAlignment {
+case .left:
+    print("left")
+case .center:
+    print("center")
+case .right:
+    print("right")
+}
+
+if textAlignment == .left {
+    print("left")
+} else if textAlignment == .center {
+    print("center")
+} else {
+    print("right")
+}
+
+
+
+
+
+
+
+
 
 
 

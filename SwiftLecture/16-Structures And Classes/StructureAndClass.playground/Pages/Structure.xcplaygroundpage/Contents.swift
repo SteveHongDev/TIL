@@ -27,7 +27,24 @@ import UIKit
  */
 
 
+struct Person {
+    var name: String
+    var age: Int
+    
+    func speak() {
+        print("Hello")
+    }
+}
 
+let p = Person(name: "Steve", age: 26)
+
+let name = "Paul"
+name
+
+p.name
+p.age
+
+p.speak()
 
 
 

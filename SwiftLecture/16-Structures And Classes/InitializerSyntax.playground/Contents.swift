@@ -26,15 +26,39 @@ import UIKit
  ![init](init.png)
  */
 
+let str = "123"
+let num = Int(str)
 
+class Position {
+    var x: Double
+    var y: Double
+    
+    init() {
+        x = 0
+        y = 0
+    }
+    
+    init(value: Double) {
+        x = value
+        y = value
+    }
+    
+    init(val1: Double, val2: Double) {
+        x = val1
+        y = val2
+    }
+}
 
+let pos1 = Position()
+let pos2 = Position(value: 3)
+let pos3 = Position(val1: 2, val2: 7)
 
-
-
-
-
-
-
+pos1.x
+pos1.y
+pos2.x
+pos2.y
+pos3.x
+pos3.y
 
 
 

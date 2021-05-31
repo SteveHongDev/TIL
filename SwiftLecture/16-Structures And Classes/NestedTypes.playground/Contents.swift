@@ -27,14 +27,26 @@ import UIKit
  */
 
 
+class One {
+    struct Two {
+        enum Three {
+            case a
+            
+            class Four {
+                
+            }
+        }
+    }
+    
+    var a = Two()
+}
 
 
+let two: One.Two = One.Two()
 
+let four: One.Two.Three.Four = One.Two.Three.Four()
 
-
-
-
-
+let a = One.Two.Three.a
 
 
 
