@@ -26,7 +26,10 @@ import UIKit
  ![syntax](syntax1.png)
  */
 
-
+struct Person {
+    let name: String = "Steve"
+    var age: Int = 26
+}
 
 
 
@@ -37,11 +40,11 @@ import UIKit
  ![syntax](syntax2.png)
  */
 
+var p = Person() // 구조체일 때는 p가 let인 경우, 구조체 내 모든 속성이 상수가 된다.
+p.name
+p.age
 
-
-
-
-
+p.age = 30
 
 
 
@@ -52,6 +55,41 @@ import UIKit
  ![lazy](lazy.png)
  ![lazy-syntax](lazy-syntax.png)
  */
+
+struct Image {
+    init() {
+        print("new image")
+    }
+}
+
+struct BlogPost {
+    let title: String = "Title"
+    let content: String = "Content"
+    lazy var attachment: Image = Image()
+    
+    let date: Date = Date()
+    
+    lazy var formattedDate: String = {
+        let f = DateFormatter()
+        f.dateStyle = .long
+        f.timeStyle = .medium
+        return f.string(from: date) // date를 받아오기 위하여 lazy로 선언해서 단계를 나눔
+    }()
+}
+
+var post = BlogPost()
+post.attachment
+
+
+
+
+
+
+
+
+
+
+
 
 
 

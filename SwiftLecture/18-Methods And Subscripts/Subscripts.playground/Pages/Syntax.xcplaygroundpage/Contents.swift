@@ -27,7 +27,8 @@ import UIKit
  ![subscript](subscript.png)
  */
 
-
+let list = ["A", "B", "C"]
+list[0]
 
 
 
@@ -41,8 +42,50 @@ import UIKit
  ![subscript-syntax](subscript-syntax.png)
  */
 
+class List {
+    var data = [1, 2, 3]
+    
+    subscript(i index: Int) -> Int {
+        get {
+            return data[index]
+        }
+        
+        set {
+            data[index] = newValue
+        }
+    }
+    
+}
 
 
+
+var l = List()
+l[i: 0]
+
+l[i: 1] = 123 // 보통은 이렇게 안씀
+
+struct Matrix {
+    var data = [[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]]
+    
+    subscript(row: Int, col: Int) -> Int { // 읽기 전용
+        if row < 3 && row >= 0 {
+            if col < 3 && col >= 0 {
+                return data[row][col]
+            } else {
+                print("col error")
+                return 0
+            }
+        } else {
+            print("row error")
+            return 0
+        }
+    }
+}
+
+let m = Matrix()
+m[0, 3]
 
 
 

@@ -26,9 +26,15 @@ import UIKit
  ![self](self.png)
  */
 
-class Size {
-   var width = 0.0
-   var height = 0.0
+struct Size {
+    var width = 0.0
+    var height = 0.0
+    
+    mutating func reset(value: Double) {
+//        width = value
+//        height = value
+        self = Size(width: value, height: value) // only for struct
+    }
 }
 
 
@@ -52,3 +58,17 @@ class Size {
  # super
  ![super](super.png)
  */
+
+// only for class
+
+
+
+
+
+
+
+
+
+
+
+

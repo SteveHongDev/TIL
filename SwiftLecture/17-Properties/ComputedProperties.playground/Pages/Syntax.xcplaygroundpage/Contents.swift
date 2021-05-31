@@ -35,9 +35,17 @@ class Person {
       self.name = name
       self.yearOfBirth = year
    }
+    
+    var age: Int { // =의 유무에 따라 읽기 전용 계산속성일 수도 클로저를 저장하는 변수일 수도 있다.
+        let calendar = Calendar.current
+        let now = Date()
+        let year = calendar.component(.year, from: now)
+        return year - yearOfBirth
+    }
 }
 
-
+let p = Person(name: "Steve", year: 1996)
+p.age // getter
 
 
 
@@ -54,6 +62,8 @@ class Person {
  ![readonly-1](readonly-1.png)
  ![readonly-2](readonly-2.png)
  */
+ // 주로 아랫쪽을 씀
+
 
 
 

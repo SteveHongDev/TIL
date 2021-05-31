@@ -27,6 +27,28 @@ import UIKit
  */
 
 class Size {
-   var width = 0.0
+    var width = 0.0 {
+        willSet {
+            print(width, "=>", newValue)
+        }
+        didSet {
+            print(oldValue, "=>", width)
+        }
+    }
 }
+
+var s = Size()
+
+s.width = 1.0
+
+
+
+
+
+
+
+
+
+
+
 

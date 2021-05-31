@@ -28,10 +28,27 @@ import UIKit
  ![call](call.png)
  */
 
+class Circle {
+    static let pi = 3.14
+    var radius = 0.0
+    
+    func getArea() -> Double {
+        return radius * radius * Circle.pi
+    }
+    
+    class func printPi() {
+        print(pi)
+    }
+}
 
 
+Circle.printPi()
 
-
+class StrokeCircle: Circle {
+    override class func printPi() {
+        print(pi)
+    }
+}
 
 
 
