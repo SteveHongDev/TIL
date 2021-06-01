@@ -51,6 +51,31 @@ class Square: Rectangle {
    
 }
 
+let f = Figure(name: "Unknown")
+f.name
+
+let r = Rectangle(name: "Rect")
+r.width
+r.height
+r.name
+
+let s: Figure = Square(name: "Sq") // upcasting -> no error
+//s.name
+//s.width
+//s.height
+
+let downCastedS = s as! Rectangle // Figure -> Rectangle -> Square ==> Square 객체를 Figure로 upcasting한 것을 Square의 superclass이고 Figure의 subclass인 것으로 downcasting 가능
+downCastedS.name
+downCastedS.width
+downCastedS.height
+
+
+class Rhombus: Square {
+    var angle = 45.0
+}
+
+let dr = s as! Rhombus // Figure -> Rectangle -> Square -> Rhombus ==> Square 객체를 Square의 subclass로 downcasting은 불가능
+
 
 
 

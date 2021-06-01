@@ -39,4 +39,22 @@ class Position {
 class Rect {
    var origin = Position()
    var size = Size()
+    
+    deinit {
+        print("deinit \(self)")
+    }
 }
+
+var r: Rect? = Rect()
+r = nil
+
+
+
+
+
+
+
+
+
+
+

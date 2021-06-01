@@ -36,11 +36,31 @@ class Figure {
    func draw() {
       print("draw \(name)")
    }
+    
+    convenience init() {
+        self.init(name: "unknown")
+    }
 }
 
 class Rectangle: Figure {
-   var width: Double
-   var height: Double
+    var width: Double = 0.0
+    var height: Double = 0.0
+    
+    init(name: String, width: Double, height: Double) {
+        self.width = width
+        self.height = height
+        super.init(name: name)
+    }
+    
+    override init(name: String) {
+        width = 0
+        height = 0
+        super.init(name: name)
+    }
+    
+    convenience init() {
+        self.init(name: "unknown") // 동일한 클래스의 init 호출, super.init 접근 불가능 -> overriding 적용 안됨
+    }
 }
 
 

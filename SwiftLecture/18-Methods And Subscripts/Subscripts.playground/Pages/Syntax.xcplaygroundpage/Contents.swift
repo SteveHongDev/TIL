@@ -69,18 +69,12 @@ struct Matrix {
                 [4, 5, 6],
                 [7, 8, 9]]
     
-    subscript(row: Int, col: Int) -> Int { // 읽기 전용
-        if row < 3 && row >= 0 {
-            if col < 3 && col >= 0 {
-                return data[row][col]
-            } else {
-                print("col error")
-                return 0
-            }
-        } else {
-            print("row error")
-            return 0
+    subscript(row: Int, col: Int) -> Int? { // 읽기 전용
+        var num: Int? = nil
+        if row <= 2 && col <= 2 {
+            num = data[row][col]
         }
+        return num
     }
 }
 

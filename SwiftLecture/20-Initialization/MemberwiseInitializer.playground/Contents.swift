@@ -32,6 +32,7 @@ struct First {
    let c: Int
 }
 
+let f = First(a: 1, b: 2, c: 3)
 
 struct Second {
    let a: Int = 0
@@ -39,13 +40,26 @@ struct Second {
    let c: Int
 }
 
+let s = Second(c: 2)
+
 
 struct Third {
    var a: Int = 0
    var b: Int = 1
    var c: Int
    
-   
+    
    
 }
+
+extension Third { // 이렇게 init을 extension에 집어 넣으면, Memberwise Initializer도 사용가능
+    init(value: Int) {
+        a = value
+        b = value
+        c = value
+    }
+}
+
+
+let t = Third(a: 1, b: 2, c: 3)
 

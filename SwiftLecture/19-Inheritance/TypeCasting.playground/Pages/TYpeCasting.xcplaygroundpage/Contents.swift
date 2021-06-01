@@ -74,12 +74,20 @@ class Circle: Figure {
  ![type-check](type-check.png)
  */
 
+let num = 123
 
+num is Int
+num is Double
+num is String
 
+let t = Triangle(name: "Tri")
+let r = Rectangle(name: "Rect")
+let s = Square(name: "Sq")
+let c = Circle(name: "Cir")
 
-
-
-
+r is Rectangle
+r is Figure // upcasting은 가능
+r is Square // downcasting은 불가
 
 
 
@@ -90,6 +98,42 @@ class Circle: Figure {
  ## Type Casting Operator
  ![type-casting](type-casting.png)
  */
+
+let nsstr = "str" as NSString
+
+//"str" as Int
+
+t as? Triangle
+t as! Triangle
+
+var upcasted: Figure = s
+upcasted = s as Figure
+
+upcasted as? Square
+upcasted as! Square
+upcasted as? Rectangle
+upcasted as! Rectangle
+
+//upcasted as? Circle
+//upcasted as! Circle
+
+if let c = upcasted as? Circle {
+    
+} // downcasting 시에 권장
+
+
+let list = [t, r, s, c] // upcasting되어서 전체가 Figure class로 저장됨
+
+for item in list {
+    item.draw() //Figure로 upcasting되었지만 overriding된 method 호출 - polymorphism
+//    item.radius
+    
+    if let c = item as? Circle {
+        c.radius
+    }
+}
+
+
 
 
 

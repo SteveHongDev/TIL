@@ -28,24 +28,79 @@ import UIKit
  */
 
 struct Size {
-   var width: Double
-   var height: Double
+    var width: Double
+    var height: Double
 
-   init(w: Double, h: Double) {
-      width = w
-      height = h
-   }
+    init(w: Double, h: Double) {
+        width = w
+        height = h
+    }
 
-   init(value: Double) {
-      width = value
-      height = value
-   }
+    init(value: Double) {
+        self.init(w: value, h: value) // initializer delegation
+    }
 }
 
 
 /*:
  ## Class
  */
+// 1. Delegate Up
+// 2. Delegated Across
+// 3. Last, all convenience initializers must point designated initializer
+
+class Figure {
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    convenience init() {
+        self.init(name: "unknown") // Rule 2
+    }
+}
+
+
+class Rectangle: Figure {
+    var width = 0.0
+    var height = 0.0
+    
+    init(n: String, w: Double, h: Double) {
+        width = w
+        height = h // phase 1
+        super.init(name: n) // Rule 1
+        // phase 2
+    }
+    
+    convenience init(value: Double) {
+        self.init(n: "rect", w: value, h: value) // Rule 2
+    }
+}
+
+
+class Square: Rectangle {
+    convenience init(value: Double) {
+        self.init(n: "square", w: value, h: value)
+    }
+    
+    convenience init() {
+        self.init(value: 0.0)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

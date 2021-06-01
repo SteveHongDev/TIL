@@ -27,29 +27,56 @@ import UIKit
 
 
 class Figure {
-   var name = "Unknown"
+    var name = "Unknown"
 
-   init(name: String) {
+    init(name: String) {
       self.name = name
-   }
+    }
 
-   func draw() {
-      print("draw \(name)")
-   }
+    final func draw() {
+        print("draw \(name)")
+    }
 }
 
 class Circle: Figure {
-   var radius = 0.0
+    final var radius = 0.0
+    
+    var diameter: Double {
+        return radius * 2
+    }
+    
+//    override func draw() {
+//        super.draw()
+//        print("🎈")
+//    }
 }
 
 let c = Circle(name: "Circle")
 c.draw()
 
+class Oval: Circle {
+//    override var diameter: Double {
+//        willSet {
+//            print(newValue)
+//        }
+//        didSet {
+//            print(oldValue)
+//        }
+//    }
+    
+//    override var radius: Double {
+//        willSet {
+//            print(newValue)
+//        }
+//        didSet {
+//            print(oldValue)
+//        }
+//    }
+}
 
-
-
-
-
+let o = Oval(name: "Oval")
+o.radius
+o.draw()
 
 
 

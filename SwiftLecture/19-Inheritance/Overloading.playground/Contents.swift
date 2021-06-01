@@ -26,5 +26,74 @@ import UIKit
  */
 
 
+func process(value: String) {
+    print("process String")
+}
+
+func process(value: String, anotherValue: String) { // Rule #1
+    
+}
+
+func process(value: Int) { // Rule #2
+    print("process Int")
+}
+
+func process(_ value: String) { // Rule #3
+    
+}
+
+// Rule #4 - 안쓰는 것이 낫다. 차라리 함수명을 바꾸자.
+func process(value: Double) -> Int {
+    return Int(value)
+}
+
+func process(value: Double) -> String? {
+    return String(value)
+}
+
+process(value: 0)
+process(value: "HI")
+
+process(value: "HI")
+process("HI")
+
+let resultInt1: Int = process(value: 12.34)
+//or
+let resultInt2 = process(value: 12.34) as Int
+let resultOptionalString: String? = process(value: 12.34)
+
+struct Rectangle {
+    func area() -> Double {
+        print("Instance Method")
+        return 0.0
+    }
+    
+    static func area() -> Double {
+        print("Type Method")
+        return 0.0
+    }
+}
+
+let r = Rectangle()
+r.area()
+Rectangle.area()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

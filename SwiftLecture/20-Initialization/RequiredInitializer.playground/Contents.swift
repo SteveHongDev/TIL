@@ -31,7 +31,7 @@ import Foundation
 class Figure {
    var name: String
 
-   init(name: String) {
+   required init(name: String) {
       self.name = name
    }
 
@@ -43,6 +43,18 @@ class Figure {
 class Rectangle: Figure {
    var width = 0.0
    var height = 0.0
+    
+    init() {
+        width = 0.0
+        height = 0.0
+        super.init(name: "unknown")
+    }
+    
+    required init(name: String) { // override init이 아니고 required로 작성하는 이유는 Rectangle의 subclass에서도 overriding을 강제하기 위하여
+        width = 0.0
+        height = 0.0
+        super.init(name: name)
+    }
 }
 
 
