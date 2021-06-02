@@ -26,3 +26,42 @@ import UIKit
  ![method](method.png)
  */
 
+protocol Resettable {
+    static func reset()
+}
+
+class Size: Resettable {
+    var width = 0.0
+    var height = 0.0
+    
+    func reset() {
+        width = 0.0
+        height = 0.0
+    }
+    
+    class func reset() {
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

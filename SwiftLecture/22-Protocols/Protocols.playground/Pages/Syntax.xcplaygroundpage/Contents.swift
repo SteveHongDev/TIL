@@ -27,7 +27,9 @@ import UIKit
  ![protocol-inheritance](protocol-inheritance.png)
  */
 
-
+protocol Something {
+    func doSomething()
+}
 
 
 
@@ -37,7 +39,11 @@ import UIKit
  ![adopting](adopting.png)
  */
 
-
+struct Size: Something {
+    func doSomething() {
+        
+    }
+}
 
 
 
@@ -47,5 +53,13 @@ import UIKit
  ![class-only](class-only.png)
  */
 
+protocol SomethingObject: AnyObject, Something {
+    
+}
 
+class Object: SomethingObject {
+    func doSomething() {
+        
+    }
+}
 

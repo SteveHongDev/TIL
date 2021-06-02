@@ -26,10 +26,28 @@ import UIKit
  ![property](property.png)
  */
 
+protocol Figure {
+    static var name: String { get set }
+}
 
+struct Rect: Figure {
+    static var name = "Rectangle"
+}
 
+struct Tri: Figure {
+    static var name = "Triangle"
+}
 
-
+class Cir: Figure {
+    class var name: String {
+        get {
+            return "Circle"
+        }
+        set {
+            
+        }
+    }
+}
 
 
 
