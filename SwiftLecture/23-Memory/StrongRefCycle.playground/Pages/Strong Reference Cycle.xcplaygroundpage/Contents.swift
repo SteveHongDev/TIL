@@ -53,10 +53,13 @@ var person: Person? = Person()
 var rentedCar: Car? = Car(model: "Porsche")
 
 person?.car = rentedCar
+rentedCar?.lessee = person
 
+person = nil
+rentedCar = nil
 
-
-
+person = nil
+rentedCar = nil
 
 
 //: [Next](@next)

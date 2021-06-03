@@ -16,7 +16,7 @@ class Person {
 
 class Car {
    var model: String
-   unowned var lessee: Person
+   unowned var lessee: Person?
 
    init(model: String, lessee: Person) {
       self.model = model
@@ -34,6 +34,11 @@ var rentedCar: Car? = Car(model: "Porsche", lessee: person!)
 person?.car = rentedCar
 
 person = nil
+rentedCar.lessee = nil
+
+rentedCar?.lessee
+
 rentedCar = nil
 
 
+// unowned는 nonOptional로 쓸 때만, optional로 쓸 때는 weak를 쓰자

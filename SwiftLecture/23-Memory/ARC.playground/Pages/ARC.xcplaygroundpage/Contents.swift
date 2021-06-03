@@ -33,10 +33,17 @@ class Person {
    }
 }
 
+var person1: Person?
+var person2: Person?
+var person3: Person?
 
+person1 = Person()
+person2 = person1
+person3 = person1
 
-
-
+person1 = nil
+person2 = nil
+person3 = nil
 
 
 

@@ -38,13 +38,13 @@ struct PersonValue {
 }
 
 class PersonObject {
-   let name: String = "John Doe"
-   let age: Int = 0
-   
-   func doSomething() {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 1) { 
-         print(name, age)
-      }
-   }
+    let name: String = "John Doe"
+    let age: Int = 0
+
+    func doSomething() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+            print(name, age)
+        }
+    }
 }
 

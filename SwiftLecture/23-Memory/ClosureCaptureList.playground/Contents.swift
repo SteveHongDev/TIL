@@ -29,7 +29,7 @@ class Car {
    var totalDrivingDistance = 0.0
    var totalUsedGas = 0.0
    
-   lazy var gasMileage: () -> Double = {
+   lazy var gasMileage: () -> Double = { [unowned self] in
       return self.totalDrivingDistance / self.totalUsedGas
    }
    
@@ -44,7 +44,11 @@ class Car {
 }
 
 
+var myCar: Car? = Car()
+myCar?.drive()
+myCar?.gasMileage()
 
+myCar = nil
 
 
 
@@ -60,7 +64,13 @@ class Car {
  ![closurecapturelist-valuetype](closurecapturelist-valuetype.png)
  */
 
+var a = 0
+var b = 0
+let c = { [a] in print(a, b) }
 
+a = 1
+b = 2
+c()
 
 
 /*:
