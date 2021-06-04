@@ -46,9 +46,7 @@ func parsing(data: [String: Any]) throws {
 
 do {
    try parsing(data: [:])
-} catch DataParsingError.invalidType {
-   
-} catch DataParsingError.invalidField {
+} catch DataParsingError.invalidType, DataParsingError.invalidField { // latest version
    
 } catch DataParsingError.missingRequiredField(let fieldName) {
    
@@ -61,6 +59,12 @@ do {
    try parsing(data: [:])
 } catch DataParsingError.missingRequiredField(let fieldName) {
    
-} catch {
-   
+} catch let err as DataParsingError {
+    switch err {
+    case .invalidField, .invalidType: // previous version
+        // code
+        break
+    default:
+        break
+    }
 }

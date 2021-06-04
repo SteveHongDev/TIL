@@ -27,13 +27,33 @@ import UIKit
  */
 
 protocol QueueCompatible {
-   func enqueue(value: Int)
-   func dequeue() -> Int?
+    associatedtype Element: Equatable
+    func enqueue(value: Element)
+    func dequeue() -> Element?
+}
+
+class IntegerQueue: QueueCompatible {
+    typealias Element = Int
+    
+    func enqueue(value: Int) {
+        print(value)
+    }
+    
+    func dequeue() -> Int? {
+        return 0
+    }
 }
 
 
-
-
+class DoubleQueue: QueueCompatible { // 실제로는 이렇게 쓴다.
+    func enqueue(value: Double) {
+        print(value)
+    }
+    
+    func dequeue() -> Double? {
+        return 0.0
+    }
+}
 
 
 

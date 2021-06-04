@@ -44,5 +44,24 @@ func parsing(data: [String: Any]) throws {
    // Parsing
 }
 
+if let _ = try? parsing(data: [:]) {
+    print("success")
+} else {
+    print("fail")
+}
+
+do {
+    try parsing(data: [:])
+    print("success")
+} catch {
+    print("fail")
+}
+
+try? parsing(data: [:])
+
+try! parsing(data: [:]) // runtime error
+
+
+
 
 

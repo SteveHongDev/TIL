@@ -64,7 +64,17 @@ func swapValue<T>(lhs: inout T, rhs: inout T) {
    rhs = tmp
 }
 
+a = 1
+b = 2
+swapValue(lhs: &a, rhs: &b)
+a
+b
 
+var c = 1.2
+var d = 3.4
+swapValue(lhs: &c, rhs: &d)
+c
+d
 
 
 

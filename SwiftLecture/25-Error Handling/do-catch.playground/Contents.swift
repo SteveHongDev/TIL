@@ -44,3 +44,30 @@ func parsing(data: [String: Any]) throws {
    // Parsing
 }
 
+func handleError() throws { // throws를 붙여주면, catch를 작성하지 않았을 시에 호출된 코드부로 에러가 전달된다. catch를 작성한 것이 있다면 작성한 것은 함수 내에서 처리되고, 아니면 호출된 코드부로 간다.
+    do {
+        try parsing(data: ["name": ""])
+    } catch {
+        if let error = error as? DataParsingError {
+            switch error {
+            case .invalidType:
+                print("invalid type")
+            default:
+                print("handle error")
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

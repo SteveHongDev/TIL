@@ -26,17 +26,44 @@ import UIKit
  ![defer](defer.png)
  */
 
+func processFile(path: String) {
+    print("1")
+    let file = FileHandle(forReadingAtPath: path)
+    
+    // Process
+    defer {
+        print("2")
+        file?.closeFile()
+    }
+    
+    if path.hasSuffix(".jpg") {
+        print("3")
+        return
+    }
+    print("4")
+}
+
+
+//processFile(path: "file.swift")
+
+
+func testDefer() {
+    defer {
+        print("1")
+    }
+    
+    defer {
+        print("2")
+    }
+    
+    defer {
+        print("3")
+    }
+}
 
 
 
-
-
-
-
-
-
-
-
+testDefer() // 3 -> 2 -> 1 defer문은 LIFO
 
 
 

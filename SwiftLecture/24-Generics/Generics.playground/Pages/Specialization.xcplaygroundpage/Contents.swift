@@ -31,7 +31,7 @@ import Foundation
 func swapValue<T: Equatable>(lhs: inout T, rhs: inout T) {
    print("generic version")
    
-   if lhs == rhs {
+    if lhs == rhs {
       return
    }
    
@@ -39,5 +39,33 @@ func swapValue<T: Equatable>(lhs: inout T, rhs: inout T) {
    lhs = rhs
    rhs = tmp
 }
+
+func swapValue(lhs: inout String, rhs: inout String) { // generic보다 우선순위가 높다
+    print("specialized version")
+    
+    if lhs.caseInsensitiveCompare(rhs) == .orderedSame {
+        return
+    }
+    
+    let tmp = lhs
+    lhs = rhs
+    rhs = tmp
+}
+
+var a = 1
+var b = 2
+swapValue(lhs: &a, rhs: &b)
+a
+b
+
+var c = "Swift"
+var d = "Objective-C"
+swapValue(lhs: &c, rhs: &d)
+c
+d
+
+
+
+
 
 

@@ -26,4 +26,38 @@ import UIKit
  ![generic-type](generic-type.png)
  */
 
+struct Color<T> {
+    var red: T
+    var green: T
+    var blue: T
+}
+
+var c = Color(red: 128, green: 80, blue: 200)
+
+//let d: Color<Double> //= Color(red: 128.0, green: 80.0, blue: 200.0)
+
+//let arr: Array<Int>
+//
+//let dict: Dictionary<String, Double>
+
+extension Color where T == Int { // Type parameter를 넣지 못한다. 동일한 파라미터를 사용해야만 하기 때문이다
+    func getComponents() -> [T] {
+        return [red, green, blue]
+    }
+}
+
+let intColor = Color(red: 1, green: 2, blue: 3)
+intColor.getComponents()
+
+let dblColor = Color(red: 1.0, green: 2.0, blue: 3.0)
+//dblColor.getComponents() FixedWidthInteger때문에 Double에서는 extension이 추가되지 않는다
+
+
+
+
+
+
+
+
+
 

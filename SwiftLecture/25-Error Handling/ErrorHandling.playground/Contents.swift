@@ -28,8 +28,23 @@ import UIKit
  ![throws](throws.png)
  */
 
+enum DataParsingError: Error {
+    case invalidType
+    case invalidField
+    case missingRequiredField(String)
+}
 
-
+func parsing(data: [String: Any]) throws {
+    guard let _ = data["name"] else {
+        throw DataParsingError.missingRequiredField("name")
+    }
+    
+    guard let _ = data["age"] else {
+        throw DataParsingError.invalidType
+    }
+    
+    // Parsing Code
+}
 
 
 
@@ -39,6 +54,19 @@ import UIKit
  # try Statements
  ![try](try.png)
  */
+
+
+try? parsing(data: [:])
+
+
+
+
+
+
+
+
+
+
 
 
 
