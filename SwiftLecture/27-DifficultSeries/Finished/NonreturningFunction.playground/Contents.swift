@@ -1,5 +1,6 @@
 //
-//  Copyright (c) 2018 KxCoding <kky0317@gmail.com>
+//  Mastering Swift
+//  Copyright (c) KxCoding <help@kxcoding.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,21 +23,60 @@
 import UIKit
 
 /*:
- # Variadic Parameters
- ![variadic](variadic.png)
+ # Nonreturning Functions
  */
 
+func returnSomething() -> Int {
+   return 0
+}
+
+let result = returnSomething()
+print(result)
 
 
+func returnNothing() {
+   return
+}
+
+returnNothing()
+print("done")
 
 
+func doSomethingAndTerminate() -> Never {
+    fatalError("msg")
+}
 
+//doSomethingAndTerminate()
+print("after terminate")
 
+enum MyError: Error {
+    case error
+}
 
+func doSomethingAndAlwaysThrow() throws -> Never {
+    throw MyError.error
+}
 
+do {
+    try doSomethingAndAlwaysThrow()
+    print("after try")
+} catch {
+    print(error)
+}
 
+func terminate() -> Never {
+    fatalError("positive only")
+}
 
+func doSomething(with value: Int) -> Int {
+    guard value >= 0 else {
+        terminate()
+    }
+    
+    return 0
+}
 
+//doSomething(with: -1)
 
 
 

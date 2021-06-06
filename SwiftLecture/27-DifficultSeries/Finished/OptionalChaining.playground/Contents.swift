@@ -21,45 +21,77 @@
 //
 import UIKit
 
+struct Contacts {
+   var email: [String: String]?
+   var address: String?
+    
+    func printAddress() {
+        return print(address ?? "no address")
+    }
+}
+
+struct Person {
+   var name: String
+   var contacts: Contacts?
+
+   init(name: String, email: String) {
+      self.name = name
+      contacts = Contacts(email: ["home": email], address: "Seoul")
+   }
+    
+    func getContacts() -> Contacts? {
+        return contacts
+    }
+}
+
+
 /*:
- # Optional Pattern
+ # Optional Chaining
  */
 
-let a: Int? = 0
+var p = Person(name: "James", email: "swift@example.com")
+let a = p.contacts?.address
 
-let b: Optional<Int> = 0
+var optionalP: Person? = Person(name: "James", email: "swift@example.com")
+let b = optionalP?.contacts?.address
+
+b
+
+optionalP = nil
+let c = optionalP?.contacts?.address
+c
+
+p.contacts?.address?.count
+
+p.getContacts()?.address
+
+let f: (() -> Contacts?)? = p.getContacts
+
+let f2 = f?()?.address
+
+let d = p.getContacts()?.printAddress()
 
 
-if let x = a {
-   print(x)
+if p.getContacts()?.printAddress() != nil {
+    
+}
+// equals to
+if let _ = p.getContacts()?.printAddress() {
+    
 }
 
-if case .some(let x) = a {
-   print(x)
-}
+let e = p.contacts?.email?["home"]
 
-
-if case let x? = a {
-   print(x)
-}
-
-
-let list: [Int?] = [0, nil, nil, 3, nil, 5]
-
-for item in list {
-   guard let x = item else { continue }
-   print(x)
-}
-
-
-for case let x? in list {
-   print(x)
-}
+p.contacts?.email?["home"]?.count
 
 
 
 
+p.contacts?.address = "Daegu"
+p.contacts?.address
 
+optionalP?.contacts?.address = "Daegu"
+optionalP?.contacts?.address
 
 
 

@@ -26,6 +26,26 @@ import UIKit
  */
 
 
+func outer() -> () -> () {
+    func inner() {
+        print("inner")
+    }
+    
+    print("outer")
+    
+    return inner
+}
+
+
+
+let f = outer()
+//inner()
+
+f()
+
+
+
+
 
 
 

@@ -1,6 +1,5 @@
 //
-//  Mastering Swift
-//  Copyright (c) KxCoding <help@kxcoding.com>
+//  Copyright (c) 2018 KxCoding <kky0317@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -23,20 +22,43 @@
 import UIKit
 
 /*:
- # Nonreturning Functions
+ # Variadic Parameters
+ ![variadic](variadic.png)
  */
 
-func returnSomething() -> Int {
-   return 0
+print("Hello")
+
+print("Hello", "Swift")
+
+func printSum(of nums: Int..., b: Double...) {
+    var sum = 0
+    var doubleSum: Double = 0
+    for num in nums {
+        sum += num
+    }
+    for doubleNum in b {
+        doubleSum += doubleNum
+    }
+    print(sum)
+    print(doubleSum)
 }
 
-let result = returnSomething()
-print(result)
+printSum(of: 1, 2, 3)
+
+printSum(of: 1, 2, 3, 4, 5, b: 3.0, 7.0)
 
 
-func returnNothing() {
-   return
-}
 
-returnNothing()
-print("done")
+
+
+
+
+
+
+
+
+
+
+
+
+
