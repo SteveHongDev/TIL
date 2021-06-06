@@ -26,6 +26,8 @@ import UIKit
 /*:
  # Autoclosure
  */
+//득보다 실이 많은 autoclosure.. 꼭 필요한 것이 아니면 쓰지 말자.
+
 
 func random() -> Int {
    return Int.random(in: 0...100)
@@ -41,10 +43,31 @@ print("-------------------------------")
 
 func takeClosure(param: () -> Int) {
    print(#function)
-   print(param())
+//   print(param())
 }
 
 takeClosure(param: { Int.random(in: 0...100) })
 print("-------------------------------")
+
+
+func takeAutoclosure(param: @autoclosure @escaping () -> Int) {
+    print(#function)
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        print(param())
+    }
+    print(param())
+}
+
+takeAutoclosure(param: Int.random(in: 0...100))
+
+
+let rnd = random()
+assert(rnd > 30)
+
+
+
+
+
+
 
 
