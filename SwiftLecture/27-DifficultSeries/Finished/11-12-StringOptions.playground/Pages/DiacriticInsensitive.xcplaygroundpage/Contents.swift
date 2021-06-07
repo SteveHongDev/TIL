@@ -27,8 +27,13 @@ import Foundation
  # Diacritic Insensitive
  */
 
+let a = "Cafe"
+let b = "Cafè"
 
+a == b
+a.compare(b) == .orderedSame
 
+a.compare(b, options: [.diacriticInsensitive]) == .orderedSame
 
 
 
