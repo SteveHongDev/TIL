@@ -31,19 +31,66 @@ import Foundation
 
 @propertyWrapper
 class SimpleWrapper {
-   var wrappedValue: Int
+    var wrappedValue: Int
+    var metadata: String?
 
-   init() {
-      print(#function)
-      wrappedValue = 0
-   }
+    init() {
+        print(#function)
+        wrappedValue = 0
+        metadata = nil
+    }
+
+    init(wrappedValue value: Int) {
+        print(#function)
+        wrappedValue = value
+        metadata = nil
+    }
+    
+    init(wrappedValue: Int, metadata: String?) {
+        print(#function)
+        self.wrappedValue = wrappedValue
+        self.metadata = metadata
+    }
 }
 
 
 struct MyType {
-
+    @SimpleWrapper
+    var a: Int = 123
+    
+    @SimpleWrapper(wrappedValue: 456)
+    var b: Int
+    
+    @SimpleWrapper(wrappedValue: 123, metadata: "number") // 권장
+    var c: Int
+    
+    @SimpleWrapper(metadata: "number")
+    var d: Int = 123 {
+        get {
+            
+        }
+        set {
+            
+        }
+    }
 }
 
 let t = MyType()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

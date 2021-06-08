@@ -31,12 +31,41 @@ import Foundation
 
 
 struct PlayerSetting {
-   var initialSpeed: Double
-   var supportGesture: Bool
+    @UserDefaultHelper(key: "initalSpeed", defaultValue: 1.0)
+    var initialSpeed: Double
+    
+    @UserDefaultHelper(key: "supportGesture", defaultValue: true)
+    var supportGesture: Bool
+    
+    func resetAll() {
+        _initialSpeed.reset()
+        _supportGesture.reset()
+    }
+}
+
+@propertyWrapper
+struct UserDefaultHelper<Value> {
+    let key: String
+    let defaultValue: Value
+    
+    var wrappedValue: Value {
+        get {
+            UserDefaults.standard.object(forKey: key) as? Value ?? defaultValue
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: key)
+        }
+    }
+    
+    func reset() {
+        UserDefaults.standard.setValue(defaultValue, forKey: key)
+    }
+    
+    var projectedValue: Self { return self }
 }
 
 
-var currentSetting = PlayerSetting(initialSpeed: 1.0, supportGesture: true)
+var currentSetting = PlayerSetting()
 
 currentSetting.initialSpeed
 currentSetting.initialSpeed = 1.5
@@ -46,7 +75,7 @@ currentSetting.supportGesture
 currentSetting.supportGesture = false
 currentSetting.supportGesture
 
-
+currentSetting.$initialSpeed.reset()
 
 
 

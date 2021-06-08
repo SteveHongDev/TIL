@@ -27,20 +27,35 @@ import UIKit
  */
 
 extension Int {
-   static let zero: Int = 0
+    static let zero: Self = 0
 
-   var zero: Int {
-      return 0
-   }
+    var zero: Self {
+        return 0
+    }
 
-   func makeZero() -> Int {
-      return Int()
-   }
+    func makeZero() -> Self {
+        return Self()
+    }
 }
 
 
 extension Double {
+    static let zero: Self = 0
 
+    var zero: Self {
+        return 0
+    }
+
+    func makeZero() -> Self {
+        return Self()
+    }
 }
+
+
+
+Int.zero
+Double.zero
+
+
 
 

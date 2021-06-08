@@ -25,11 +25,39 @@ import UIKit
 /*:
  # Dynamic Member Lookup
  */
-
+@dynamicMemberLookup
 struct Person {
-   var name: String
-   var address: String
+    var name: String
+    var address: String
+    
+    subscript(dynamicMember member: String) -> String {
+        switch member {
+        case "nameKey":
+            return name
+        case "addressKey":
+            return address
+        default:
+            return "n/a"
+        }
+    }
 }
+
+let p = Person(name: "James", address: "seoul")
+p.name
+p.address
+
+p[dynamicMember: "nameKey"]
+p[dynamicMember: "addressKey"]
+
+p.nameKey
+p.addressKey
+
+p.missingKey
+
+
+
+
+
 
 
 

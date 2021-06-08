@@ -23,19 +23,33 @@
 import Foundation
 
 /*:
- # Nonfrozen Enumeration
+ # CaseIterable
  */
 
-enum ServiceType {
-   case onlineCourse
-   case offlineCamp
+enum Weekday: Int, CaseIterable {
+   case sunday = 100
+   case monday
+   case tuesday
+   case wednesday
+   case thursday
+   case friday
+   case saturday
 }
 
-let selectedType = ServiceType.onlineCourse
+let rnd = Int.random(in: 0...Weekday.allCases.count)
 
-switch selectedType {
-case .onlineCourse:
-   print("send online course email")
-case .offlineCamp:
-   print("send offline camp email")
+Weekday(rawValue: rnd)
+
+Weekday.allCases.randomElement()
+
+for w in Weekday.allCases {
+    print(w)
 }
+
+
+
+
+
+
+
+

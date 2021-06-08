@@ -1,6 +1,5 @@
 //
-//  Mastering Swift
-//  Copyright (c) KxCoding <help@kxcoding.com>
+//  Copyright (c) 2018 KxCoding <kky0317@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,21 +19,42 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-import Foundation
+import UIKit
 
 /*:
- # CaseIterable
+ # Identity Operator
+ ![identity-op](identity-op.png)
  */
 
-enum Weekday: Int {
-   case sunday
-   case monday
-   case tuesday
-   case wednesday
-   case thursday
-   case friday
-   case saturday
+class A {
+    
 }
+
+let a = A()
+let b = a
+let c = A()
+
+a === b
+a === c
+
+a !== c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

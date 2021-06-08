@@ -22,9 +22,88 @@
 import UIKit
 
 /*:
- # Identity Operator
- ![identity-op](identity-op.png)
+ # Enumeration Case Pattern
+ ![enum-case](enum-case.png)
  */
+
+enum Transportation {
+    case bus(number: Int)
+    case taxi(company: String, number: Int)
+    case subway(lineNumber: Int, express: Bool)
+}
+
+var tpt = Transportation.bus(number: 7)
+
+switch tpt {
+case .bus(let n):
+    print(n)
+case .taxi(let c, var n):
+    print(c, n)
+case let .subway(l, e):
+    print(l, e)
+}
+
+tpt = Transportation.subway(lineNumber: 2, express: false)
+
+
+if case let .subway(2, express) = tpt {
+    if express {
+
+    } else {
+        
+    }
+}
+
+if case .subway(_, true) = tpt {
+    
+}
+
+
+let list = [
+    Transportation.subway(lineNumber: 2, express: false),
+    Transportation.bus(number: 4412),
+    Transportation.subway(lineNumber: 7, express: true),
+    Transportation.taxi(company: "SeoulTaxi", number: 1234)
+]
+
+for case let .subway(n, _) in list {
+    print("subway \(n)")
+}
+
+for case let .subway(n, true) in list {
+    print("express subway \(n)")
+}
+
+for case let .subway(n, true) in list where n == 2 {
+    print("subway \(n)")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

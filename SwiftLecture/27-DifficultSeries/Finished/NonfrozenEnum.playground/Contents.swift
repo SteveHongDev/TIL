@@ -1,5 +1,6 @@
 //
-//  Copyright (c) 2018 KxCoding <kky0317@gmail.com>
+//  Mastering Swift
+//  Copyright (c) KxCoding <help@kxcoding.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -19,48 +20,31 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-import UIKit
+import Foundation
 
 /*:
- # Enumeration Case Pattern
- ![enum-case](enum-case.png)
+ # Nonfrozen Enumeration
  */
 
+enum ServiceType {
+    case onlineCourse
+    case offlineCamp
+    case onlineCamp
+    case seminar
+}
 
+let selectedType = ServiceType.onlineCourse
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+switch selectedType {
+case .onlineCourse:
+    print("send online course email")
+case .offlineCamp:
+    print("send offline camp email")
+case .onlineCamp:
+    print("send online camp email")
+@unknown default:
+    break
+}
 
 
 
