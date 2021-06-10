@@ -43,26 +43,67 @@ func process(oddNumber: Int) throws -> Int {
    guard !oddNumber.isMultiple(of: 2) else {
       throw NumberError.evenNumber
    }
+    
+    guard oddNumber < 1000 else {
+        throw AnotherNumberError.tooLarge
+    }
    
    return oddNumber * 2
 }
 
-do {
-   let result = try process(oddNumber: 1)
-   print(result)
-} catch {
-   print(error.localizedDescription)
+//do {
+//   let result = try process(oddNumber: 10001)
+//   print(result)
+//} catch let myErr as NumberError {
+//    switch myErr {
+//    case .negativeNumber:
+//        print("negative number")
+//    case .evenNumber:
+//        print("even number")
+//    }
+//} catch {
+//   print(error.localizedDescription)
+//}
+
+let result = Result { try process(oddNumber: 1) }
+
+switch result {
+case .success(let data):
+    print(data)
+case .failure(let error):
+    print(error.localizedDescription)
 }
 
+func processResult(oddNumber: Int) -> Result<Int, NumberError> {
+    guard oddNumber >= 0 else {
+        return .failure(.negativeNumber)
+    }
 
+    guard !oddNumber.isMultiple(of: 2) else {
+        return .failure(.evenNumber)
+    }
 
+//    guard oddNumber < 1000 else {
+//        return .failure(AnotherNumberError.tooLarge)
+//    }
 
+    return .success(oddNumber * 2)
+}
 
+let result2 = processResult(oddNumber: 1)
 
+switch result2 {
+case .success(let data):
+    print(data)
+//case .failure(let error):
+//    print(error.localizedDescription)
+default:
+    break
+}
 
-
-
-
+if let result = try? result2.get() {
+    print(result)
+}
 
 
 
