@@ -1,0 +1,58 @@
+[
+    {
+        "author": "Oscar Wilde",
+        "quotes": [
+            "Be yourself; everyone else is already taken.",
+            "Man is least himself when he talks in his own person. Give him a mask, and he will tell the truth.",
+            "I can resist everything except temptation.",
+            "A man's face is his autobiography. A woman's face is her work of fiction.",
+            "True friends stab you in the front."
+        ],
+        "image": "reflect2"
+    },
+    {
+        "author": "Mark Twain",
+        "quotes": [
+            "The secret of getting ahead is getting started.",
+            "Twenty years from now you will be more disappointed by the things you didn’t do than by the ones you did do. So, throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
+            "With courage you will dare to take risks, have the strength to be compassionate, and the wisdom to be humble. Courage is the foundation of integrity",
+            "Courage is resistance to fear, mastery of fear, not absence of fear.",
+            "Give every day the chance to become the most beautiful of your life."
+        ],
+        "image": "ambition"
+    },
+    {
+        "author": "John Stuart Mill",
+        "quotes": [
+            "Bad men need nothing more to compass their ends, than that good men should look on and do nothing.",
+            "A person may cause evil to others not only by his actions but by his inaction, and in either case he is justly accountable to them for the injury.",
+            "I have learned to seek my happiness by limiting my desires, rather than in attempting to satisfy them.",
+            "If all mankind minus one, were of one opinion, and only one person were of the contrary opinion, mankind would be no more justified in silencing that one person, than he, if he had the power, would be justified in silencing mankind.",
+            "It is not because men's desires are strong that they act ill; it is because their consciences are weak."
+        ],
+        "image": "reflect"
+    },
+    {
+        "author": "George Orwell",
+        "quotes": [
+            "Perhaps one did not want to be loved so much as to be understood.",
+            "Who controls the past controls the future. Who controls the present controls the past.",
+            "In a time of deceit telling the truth is a revolutionary act.",
+            "War is peace.\n Freedom is slavery.\n Ignorance is strength.",
+            "Every generation imagines itself to be more intelligent than the one that went before it, and wiser than the one that comes after it."
+        ],
+        "image": "calm"
+    },
+    {
+        "author": "Paulo Coelho",
+        "quotes": [
+            "And, when you want something, all the universe conspires in helping you to achieve it.",
+            "It's the possibility of having a dream come true that makes life interesting.",
+            "When we love, we always strive to become better than we are. When we strive to become better than we are, everything around us becomes better too.",
+            "One is loved because one is loved. No reason is needed for loving.",
+            "There is only one thing that makes a dream impossible to achieve: the fear of failure."
+        ],
+        "image": "focus"
+    }
+    
+]

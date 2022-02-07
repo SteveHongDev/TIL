@@ -12,4 +12,5 @@ class Pizza: Identifiable, Decodable {
     var id: UUID?
     var name: String
     var toppings: [String]
+    var image: String
 }

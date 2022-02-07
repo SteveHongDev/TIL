@@ -7,30 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		492AF3DB27AFE63E0098E840 /* foundations_m2l12_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492AF3DA27AFE63E0098E840 /* foundations_m2l12_challengeApp.swift */; };
-		492AF3DD27AFE63E0098E840 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492AF3DC27AFE63E0098E840 /* ContentView.swift */; };
-		492AF3DF27AFE63F0098E840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492AF3DE27AFE63F0098E840 /* Assets.xcassets */; };
-		492AF3E227AFE63F0098E840 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492AF3E127AFE63F0098E840 /* Preview Assets.xcassets */; };
-		492AF3E927AFE6DF0098E840 /* pizzas.json in Resources */ = {isa = PBXBuildFile; fileRef = 492AF3E827AFE6DF0098E840 /* pizzas.json */; };
-		492AF3EF27AFE76B0098E840 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492AF3EE27AFE76B0098E840 /* Pizza.swift */; };
-		492AF3F127AFE92D0098E840 /* PizzaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492AF3F027AFE92D0098E840 /* PizzaModel.swift */; };
-		49D2EF4227B10915009833D3 /* PizzaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D2EF4127B10915009833D3 /* PizzaView.swift */; };
+		49D2EF5027B10D8D009833D3 /* foundations_m2_finalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D2EF4F27B10D8D009833D3 /* foundations_m2_finalApp.swift */; };
+		49D2EF5227B10D8D009833D3 /* QuoteMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D2EF5127B10D8D009833D3 /* QuoteMainView.swift */; };
+		49D2EF5427B10D8E009833D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49D2EF5327B10D8E009833D3 /* Assets.xcassets */; };
+		49D2EF5727B10D8E009833D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49D2EF5627B10D8E009833D3 /* Preview Assets.xcassets */; };
+		49D2EF6327B11477009833D3 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D2EF6227B11477009833D3 /* Quote.swift */; };
+		49D2EF6627B114B5009833D3 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 49D2EF6527B114B5009833D3 /* data.json */; };
+		49D2EF6827B11743009833D3 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D2EF6727B11743009833D3 /* QuoteModel.swift */; };
+		49D2EF6A27B11878009833D3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D2EF6927B11878009833D3 /* DataService.swift */; };
+		49D2EF6C27B11BE8009833D3 /* QuoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D2EF6B27B11BE8009833D3 /* QuoteDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		492AF3D727AFE63E0098E840 /* foundations-m2l12-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "foundations-m2l12-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		492AF3DA27AFE63E0098E840 /* foundations_m2l12_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foundations_m2l12_challengeApp.swift; sourceTree = "<group>"; };
-		492AF3DC27AFE63E0098E840 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		492AF3DE27AFE63F0098E840 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		492AF3E127AFE63F0098E840 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		492AF3E827AFE6DF0098E840 /* pizzas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pizzas.json; sourceTree = "<group>"; };
-		492AF3EE27AFE76B0098E840 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
-		492AF3F027AFE92D0098E840 /* PizzaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaModel.swift; sourceTree = "<group>"; };
-		49D2EF4127B10915009833D3 /* PizzaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaView.swift; sourceTree = "<group>"; };
+		49D2EF4C27B10D8D009833D3 /* foundations-m2-final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "foundations-m2-final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D2EF4F27B10D8D009833D3 /* foundations_m2_finalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foundations_m2_finalApp.swift; sourceTree = "<group>"; };
+		49D2EF5127B10D8D009833D3 /* QuoteMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteMainView.swift; sourceTree = "<group>"; };
+		49D2EF5327B10D8E009833D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49D2EF5627B10D8E009833D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		49D2EF6227B11477009833D3 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		49D2EF6527B114B5009833D3 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		49D2EF6727B11743009833D3 /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		49D2EF6927B11878009833D3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		49D2EF6B27B11BE8009833D3 /* QuoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		492AF3D427AFE63E0098E840 /* Frameworks */ = {
+		49D2EF4927B10D8D009833D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,113 +42,122 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		492AF3CE27AFE63E0098E840 = {
+		49D2EF4327B10D8D009833D3 = {
 			isa = PBXGroup;
 			children = (
-				492AF3D927AFE63E0098E840 /* foundations-m2l12-challenge */,
-				492AF3D827AFE63E0098E840 /* Products */,
+				49D2EF4F27B10D8D009833D3 /* foundations_m2_finalApp.swift */,
+				49D2EF4E27B10D8D009833D3 /* foundations-m2-final */,
+				49D2EF4D27B10D8D009833D3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		492AF3D827AFE63E0098E840 /* Products */ = {
+		49D2EF4D27B10D8D009833D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				492AF3D727AFE63E0098E840 /* foundations-m2l12-challenge.app */,
+				49D2EF4C27B10D8D009833D3 /* foundations-m2-final.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		492AF3D927AFE63E0098E840 /* foundations-m2l12-challenge */ = {
+		49D2EF4E27B10D8D009833D3 /* foundations-m2-final */ = {
 			isa = PBXGroup;
 			children = (
-				492AF3DA27AFE63E0098E840 /* foundations_m2l12_challengeApp.swift */,
-				492AF3ED27AFE7550098E840 /* Data */,
-				492AF3EC27AFE74D0098E840 /* ViewModels */,
-				492AF3EB27AFE7470098E840 /* Models */,
-				492AF3EA27AFE7400098E840 /* Views */,
-				492AF3DE27AFE63F0098E840 /* Assets.xcassets */,
-				492AF3E027AFE63F0098E840 /* Preview Content */,
+				49D2EF6127B1144F009833D3 /* Services */,
+				49D2EF6027B1143E009833D3 /* Data */,
+				49D2EF5F27B11437009833D3 /* Models */,
+				49D2EF5E27B11431009833D3 /* ViewModels */,
+				49D2EF5D27B1142A009833D3 /* Views */,
+				49D2EF5327B10D8E009833D3 /* Assets.xcassets */,
+				49D2EF5527B10D8E009833D3 /* Preview Content */,
 			);
-			path = "foundations-m2l12-challenge";
+			path = "foundations-m2-final";
 			sourceTree = "<group>";
 		};
-		492AF3E027AFE63F0098E840 /* Preview Content */ = {
+		49D2EF5527B10D8E009833D3 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				492AF3E127AFE63F0098E840 /* Preview Assets.xcassets */,
+				49D2EF5627B10D8E009833D3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		492AF3EA27AFE7400098E840 /* Views */ = {
+		49D2EF5D27B1142A009833D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				492AF3DC27AFE63E0098E840 /* ContentView.swift */,
-				49D2EF4127B10915009833D3 /* PizzaView.swift */,
+				49D2EF5127B10D8D009833D3 /* QuoteMainView.swift */,
+				49D2EF6B27B11BE8009833D3 /* QuoteDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		492AF3EB27AFE7470098E840 /* Models */ = {
+		49D2EF5E27B11431009833D3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				492AF3EE27AFE76B0098E840 /* Pizza.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		492AF3EC27AFE74D0098E840 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				492AF3F027AFE92D0098E840 /* PizzaModel.swift */,
+				49D2EF6727B11743009833D3 /* QuoteModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		492AF3ED27AFE7550098E840 /* Data */ = {
+		49D2EF5F27B11437009833D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				492AF3E827AFE6DF0098E840 /* pizzas.json */,
+				49D2EF6227B11477009833D3 /* Quote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49D2EF6027B1143E009833D3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				49D2EF6527B114B5009833D3 /* data.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		49D2EF6127B1144F009833D3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				49D2EF6927B11878009833D3 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		492AF3D627AFE63E0098E840 /* foundations-m2l12-challenge */ = {
+		49D2EF4B27B10D8D009833D3 /* foundations-m2-final */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 492AF3E527AFE63F0098E840 /* Build configuration list for PBXNativeTarget "foundations-m2l12-challenge" */;
+			buildConfigurationList = 49D2EF5A27B10D8E009833D3 /* Build configuration list for PBXNativeTarget "foundations-m2-final" */;
 			buildPhases = (
-				492AF3D327AFE63E0098E840 /* Sources */,
-				492AF3D427AFE63E0098E840 /* Frameworks */,
-				492AF3D527AFE63E0098E840 /* Resources */,
+				49D2EF4827B10D8D009833D3 /* Sources */,
+				49D2EF4927B10D8D009833D3 /* Frameworks */,
+				49D2EF4A27B10D8D009833D3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "foundations-m2l12-challenge";
-			productName = "foundations-m2l12-challenge";
-			productReference = 492AF3D727AFE63E0098E840 /* foundations-m2l12-challenge.app */;
+			name = "foundations-m2-final";
+			productName = "foundations-m2-final";
+			productReference = 49D2EF4C27B10D8D009833D3 /* foundations-m2-final.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		492AF3CF27AFE63E0098E840 /* Project object */ = {
+		49D2EF4427B10D8D009833D3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					492AF3D627AFE63E0098E840 = {
+					49D2EF4B27B10D8D009833D3 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 492AF3D227AFE63E0098E840 /* Build configuration list for PBXProject "foundations-m2l12-challenge" */;
+			buildConfigurationList = 49D2EF4727B10D8D009833D3 /* Build configuration list for PBXProject "foundations-m2-final" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -154,46 +165,47 @@
 				en,
 				Base,
 			);
-			mainGroup = 492AF3CE27AFE63E0098E840;
-			productRefGroup = 492AF3D827AFE63E0098E840 /* Products */;
+			mainGroup = 49D2EF4327B10D8D009833D3;
+			productRefGroup = 49D2EF4D27B10D8D009833D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				492AF3D627AFE63E0098E840 /* foundations-m2l12-challenge */,
+				49D2EF4B27B10D8D009833D3 /* foundations-m2-final */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		492AF3D527AFE63E0098E840 /* Resources */ = {
+		49D2EF4A27B10D8D009833D3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				492AF3E927AFE6DF0098E840 /* pizzas.json in Resources */,
-				492AF3E227AFE63F0098E840 /* Preview Assets.xcassets in Resources */,
-				492AF3DF27AFE63F0098E840 /* Assets.xcassets in Resources */,
+				49D2EF5727B10D8E009833D3 /* Preview Assets.xcassets in Resources */,
+				49D2EF6627B114B5009833D3 /* data.json in Resources */,
+				49D2EF5427B10D8E009833D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		492AF3D327AFE63E0098E840 /* Sources */ = {
+		49D2EF4827B10D8D009833D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				492AF3DD27AFE63E0098E840 /* ContentView.swift in Sources */,
-				492AF3DB27AFE63E0098E840 /* foundations_m2l12_challengeApp.swift in Sources */,
-				49D2EF4227B10915009833D3 /* PizzaView.swift in Sources */,
-				492AF3F127AFE92D0098E840 /* PizzaModel.swift in Sources */,
-				492AF3EF27AFE76B0098E840 /* Pizza.swift in Sources */,
+				49D2EF6C27B11BE8009833D3 /* QuoteDetailView.swift in Sources */,
+				49D2EF5227B10D8D009833D3 /* QuoteMainView.swift in Sources */,
+				49D2EF6327B11477009833D3 /* Quote.swift in Sources */,
+				49D2EF6827B11743009833D3 /* QuoteModel.swift in Sources */,
+				49D2EF5027B10D8D009833D3 /* foundations_m2_finalApp.swift in Sources */,
+				49D2EF6A27B11878009833D3 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		492AF3E327AFE63F0098E840 /* Debug */ = {
+		49D2EF5827B10D8E009833D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,7 +266,7 @@
 			};
 			name = Debug;
 		};
-		492AF3E427AFE63F0098E840 /* Release */ = {
+		49D2EF5927B10D8E009833D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -309,14 +321,14 @@
 			};
 			name = Release;
 		};
-		492AF3E627AFE63F0098E840 /* Debug */ = {
+		49D2EF5B27B10D8E009833D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"foundations-m2l12-challenge/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"foundations-m2-final/Preview Content\"";
 				DEVELOPMENT_TEAM = X726R6A26M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -330,7 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.kumoh.s20191255.foundations-m2l12-challenge";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.kumoh.s20191255.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -338,14 +350,14 @@
 			};
 			name = Debug;
 		};
-		492AF3E727AFE63F0098E840 /* Release */ = {
+		49D2EF5C27B10D8E009833D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"foundations-m2l12-challenge/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"foundations-m2-final/Preview Content\"";
 				DEVELOPMENT_TEAM = X726R6A26M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -359,7 +371,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.kumoh.s20191255.foundations-m2l12-challenge";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.kumoh.s20191255.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -370,25 +382,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		492AF3D227AFE63E0098E840 /* Build configuration list for PBXProject "foundations-m2l12-challenge" */ = {
+		49D2EF4727B10D8D009833D3 /* Build configuration list for PBXProject "foundations-m2-final" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				492AF3E327AFE63F0098E840 /* Debug */,
-				492AF3E427AFE63F0098E840 /* Release */,
+				49D2EF5827B10D8E009833D3 /* Debug */,
+				49D2EF5927B10D8E009833D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		492AF3E527AFE63F0098E840 /* Build configuration list for PBXNativeTarget "foundations-m2l12-challenge" */ = {
+		49D2EF5A27B10D8E009833D3 /* Build configuration list for PBXNativeTarget "foundations-m2-final" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				492AF3E627AFE63F0098E840 /* Debug */,
-				492AF3E727AFE63F0098E840 /* Release */,
+				49D2EF5B27B10D8E009833D3 /* Debug */,
+				49D2EF5C27B10D8E009833D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 492AF3CF27AFE63E0098E840 /* Project object */;
+	rootObject = 49D2EF4427B10D8D009833D3 /* Project object */;
 }

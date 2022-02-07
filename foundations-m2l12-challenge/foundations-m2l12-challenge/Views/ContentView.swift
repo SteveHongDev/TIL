@@ -13,18 +13,13 @@ struct ContentView: View {
     
     var body: some View {
         
-        List(model.pizzas) { p in
+        ScrollView {
             VStack(alignment: .leading) {
-                Text(p.name)
-                    .font(.title)
-                HStack {
-                    Text(p.toppings[0])
-                    Text(p.toppings[1])
-                    Text(p.toppings[2])
+                ForEach(model.pizzas) { p in
+                    PizzaView(pizza: p)
                 }
             }
         }
-        
     }
 }
 
